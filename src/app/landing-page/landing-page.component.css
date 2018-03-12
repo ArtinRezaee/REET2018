@@ -1,0 +1,68 @@
+
+.example-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  
+.example-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background:#e62739;
+  }
+
+  .nav-list-styles {
+      width: 100%;
+      margin-top: -254px;
+  }
+
+  .card-subtitle {
+    color: #777;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+  }
+
+  .card-header {
+    color: #e62739;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-left: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+  }
+
+  .card-content {
+    color: #888;
+    font-family: inherit;
+    font-size:100%;
+    line-height: 1.8;
+    padding-bottom: 2em;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+  }
+
+  .section-border {
+    border-top: solid 6px #f4f4f4;
+  }
+
+  .icon-list {
+    list-style: none;
+    padding-left: 0;
+  }

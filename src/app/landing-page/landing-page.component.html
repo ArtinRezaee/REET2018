@@ -1,0 +1,79 @@
+<body>
+  <ng-container>
+      <mat-sidenav-container class="example-container">
+        <mat-sidenav position="end" #sidenav mode="side" opened="true" class="example-sidenav" [fixedInViewport]="false" [fixedTopGap]="0"
+        [fixedBottomGap]="0">
+          <mat-nav-list class="nav-list-styles ">
+              <h1 mat-subheader style="font-size:40px; padding-bottom:100px; color:white">REET 2018</h1>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#one'"> About </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#two'"> Call for Paper </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#three'"> Submissions </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#four'"> Important Dates </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#five'"> Program </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#six'"> Program Comittee</a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'"> Program Organizers </a>
+          </mat-nav-list>
+        </mat-sidenav>
+    
+        <mat-sidenav-content>
+          <section id="one">
+            <mat-grid-list cols="1" rowHeight="15em">
+              <mat-grid-tile
+                  [colspan]="1"
+                  [rowspan]="1">
+                <img src="../../assets/header3.jpg">
+              </mat-grid-tile>
+            </mat-grid-list>
+            <mat-card>
+              <mat-card-title class="card-header">REET 2018</mat-card-title>
+              <mat-card-subtitle class="card-subtitle">The 8th International Workshop on Requirements Patterns in conjunction with the 26th IEEE International Requirements Engineering Conference</mat-card-subtitle>
+              <mat-card-content class="card-content">
+                <p>
+                    The goal of the RePa workshop is to foster discussion on how to improve capturing, organizing, applying, and maintaining requirements patterns. The workshop would provide a forum for researchers and practitioners investigating problems and working on solutions related to patterns capturing knowledge and experience on both requirements themselves (e.g., NFR Framework) and requirements engineering (e.g., patterns to elicit requirements). Patterns' capturing, evolving and reusing requires a lot of effort and encapsulates risk related to human judgment. Thus, this year, we greatly invite those that work on methods helping to make informed decisions based on available data and reduce the required human effort by automating decision-making process via machine learning (ML) or relying on other intelligent automation approaches.
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </section>
+
+          <section id="two" class="section-border">
+            <mat-card>
+              <mat-card-title class="card-subtitle">Call For Papers</mat-card-title>
+              <mat-card-content class="card-content">
+                <p>
+                  The workshop would provide a forum for researchers and practitioners to present and discuss recent results, studies, new ideas, and trends on requirements patterns. We invite papers discussing how to improve capturing, applying, and maintaining requirements patterns. We would specially greatly welcome those papers that apply machine learning ML and other AI techniques. The topics of interest include, but are not limited to:
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </section>
+
+          <section id="three" class="section-border">
+            <mat-card>
+              <mat-card-title class="card-subtitle">Submissions</mat-card-title>
+              <mat-card-content class="card-content">
+                <p>
+                  Each submission is required to meet the requirements listed below and will be reviewed by at least two Program Committee members. Accepted papers with at least an author presenting at the Workshop will be published in the IEEE Digital Library.
+                </p>
+              </mat-card-content>
+            </mat-card>
+            <mat-card>
+              <mat-card-title class="card-subtitle"> Submission Requirements:</mat-card-title>
+              <mat-card-content class="card-content">
+                <ul>
+                    <li>Written in English</li>
+                    <li>Formatted according to the RE formatting instructions - click to see</li>
+                    <li>8 pages for long papers or 4 pages for short papers</li>
+                    <li>Submitted at <a href="https://easychair.org/conferences/?conf=repa17">https://easychair.org/conferences/?conf=repa17</a></li>
+                  </ul>
+              </mat-card-content>
+  
+            </mat-card>
+          </section>
+
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+
+
+    
+    </ng-container>
+</body>
+
