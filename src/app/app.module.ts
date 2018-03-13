@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import {LayoutModule} from '@angular/cdk/layout';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

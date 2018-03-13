@@ -1,7 +1,7 @@
 <body>
   <ng-container>
       <mat-sidenav-container class="example-container">
-        <mat-sidenav position="end" #sidenav mode="side" opened="true" class="example-sidenav" [fixedInViewport]="false" [fixedTopGap]="0"
+        <mat-sidenav position="end" #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? 'false' : 'true'" class="example-sidenav" [fixedInViewport]="false" [fixedTopGap]="0"
         [fixedBottomGap]="0">
           <mat-nav-list class="nav-list-styles ">
               <h1 mat-subheader style="font-size:40px; padding-bottom:100px; color:white">REET 2018</h1>
