@@ -4,18 +4,25 @@
         <mat-sidenav position="end" #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? 'false' : 'true'" class="example-sidenav" [fixedInViewport]="false" [fixedTopGap]="0"
         [fixedBottomGap]="0">
           <mat-nav-list class="nav-list-styles ">
-              <h1 mat-subheader style="font-size:40px; padding-bottom:100px; color:white">REET 2018</h1>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#one'"> About </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#two'"> Call for Paper </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#three'"> Submissions </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#four'"> Important Dates </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#five'"> Program </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#six'"> Program Comittee</a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'"> Program Organizers </a>
+              <!-- <h1 mat-subheader style="font-size:40px; padding-bottom:100px; color:white">REET 2018</h1> -->
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#one'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> About </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#two'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Call for Paper </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#three'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Submissions </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#four'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Important Dates </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#five'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#six'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program Comittee</a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program Organizers </a>
           </mat-nav-list>
         </mat-sidenav>
     
         <mat-sidenav-content>
+          <mat-toolbar *ngIf="mobileQuery.matches" class="toolbar-style">
+              <mat-toolbar-row>
+                  <span>REET 2018</span>
+                  <span class="toolbar-spacer"></span>
+                  <mat-icon class="toolbar-icon" (click)="sidenav.toggle()">menu</mat-icon>
+              </mat-toolbar-row>
+          </mat-toolbar>
           <section id="one">
             <mat-grid-list cols="1" rowHeight="15em">
               <mat-grid-tile
