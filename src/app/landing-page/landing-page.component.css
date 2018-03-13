@@ -25,7 +25,7 @@
 
   .nav-list-styles {
       width: 100%;
-      margin-top: -254px;
+      margin-top: -145px;
   }
 
   .card-subtitle {
@@ -82,3 +82,13 @@
     position: fixed;
     z-index: 2;
   }
+
+  .my_Avatar-container /deep/ .avatar-container{
+    width: inherit !important;
+    height: 150px !important;
+    text-align: center !important;
+  }
+
+  .my_avatar_content /deep/ .avatar-content {
+    background-color : white !important;
+}

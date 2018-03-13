@@ -11,11 +11,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import {LayoutModule} from '@angular/cdk/layout';
+import { AvatarModule, AvatarConfig  } from 'ngx-avatar';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+const avatarConfig = new AvatarConfig(['red','blue','pink', 'white']);
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatGridListModule,
     ScrollToModule.forRoot(),
-    LayoutModule
+    LayoutModule,
+    AvatarModule.forRoot(avatarConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
