@@ -92,3 +92,11 @@
   .my_avatar_content /deep/ .avatar-content {
     background-color : white !important;
 }
+
+.custom-list{
+  padding: 0px 16px 0px 16px;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  height: inherit;
+}

@@ -6,13 +6,13 @@
           <mat-nav-list class="nav-list-styles ">
               <!-- <h1 mat-subheader style="font-size:40px; padding-bottom:100px; color:white">REET 2018</h1> -->
               <ngx-avatar src="../../assets/RE18_logo.png" size="100" value="28%" class="my_Avatar-container my_avatar_content"></ngx-avatar>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#one'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> About </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#two'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Call for Paper </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#one'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Overview </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#two'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Workshop Themes </a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#three'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Submissions </a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#four'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Important Dates </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#five'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#five'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Registration </a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#six'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program Comittee</a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program Organizers </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Questions </a>
           </mat-nav-list>
         </mat-sidenav>
     
@@ -37,7 +37,12 @@
               <mat-card-subtitle class="card-subtitle">The 8th International Workshop on Requirements Patterns in conjunction with the 26th IEEE International Requirements Engineering Conference</mat-card-subtitle>
               <mat-card-content class="card-content">
                 <p>
-                    The goal of the RePa workshop is to foster discussion on how to improve capturing, organizing, applying, and maintaining requirements patterns. The workshop would provide a forum for researchers and practitioners investigating problems and working on solutions related to patterns capturing knowledge and experience on both requirements themselves (e.g., NFR Framework) and requirements engineering (e.g., patterns to elicit requirements). Patterns' capturing, evolving and reusing requires a lot of effort and encapsulates risk related to human judgment. Thus, this year, we greatly invite those that work on methods helping to make informed decisions based on available data and reduce the required human effort by automating decision-making process via machine learning (ML) or relying on other intelligent automation approaches.
+                    Effective Requirements Engineering (RE) has been recognized as a critical component in the success of a software development project.  This has led to a growing identification of the importance of incorporating significant RE components into the curriculum of university degrees in Software Engineering, Computer Science, Information Technology and other related areas. Furthermore, many industrial organizations are recognizing the need to develop RE related training programs as part of their ongoing process improvement initiatives. <br><br>
+
+                    Requirement Engineering Education and Training 2018 (REET'18 Workshop) will address issues related to RE education, both as part of a formal university degree and as ongoing skills training within the workplace. The workshop is intended to go much deeper than a surface discussion of curriculum issues and will examine specific ideas and techniques for teaching skills needed by effective requirements engineers.<br><br>
+                    
+                    In addition to topics related curriculum development, topics related to pedagogical techniques for teaching RE skills are strongly encouraged.  These skills include requirements elicitation, modeling, analysis, conflict negotiation, consensus building, and requirements specification writing, interviewing, and reviewing skills. 
+                    
                 </p>
               </mat-card-content>
             </mat-card>
@@ -45,11 +50,27 @@
 
           <section id="two" class="section-border">
             <mat-card>
-              <mat-card-title class="card-subtitle">Call For Papers</mat-card-title>
+              <mat-card-title class="card-subtitle">Workshop Themes</mat-card-title>
               <mat-card-content class="card-content">
                 <p>
-                  The workshop would provide a forum for researchers and practitioners to present and discuss recent results, studies, new ideas, and trends on requirements patterns. We invite papers discussing how to improve capturing, applying, and maintaining requirements patterns. We would specially greatly welcome those papers that apply machine learning ML and other AI techniques. The topics of interest include, but are not limited to:
+                  We invite papers discussing how to improve requirement-engineering curriculums, teaching and learning methods, and studies and researches on different techniques and pedagogical approaches. The topics of interest include, but are not limited to:
                 </p>
+                <h3 mat-header>Curriculum design and development</h3>
+                <div class=custom-list>
+                  <p mat-line *ngFor="let curriculum of curriculumDesign">{{curriculum}}</p>
+                </div>
+                <h3 mat-header>Techniques for teaching specific RE related skills</h3>
+                <div class=custom-list>
+                  <p mat-line *ngFor="let technique of techniques">{{technique}}</p>
+                </div>
+                <h3 mat-header>Assessment methods and practices of RE knowledge and skills</h3>
+                <div class="custom-list">
+                  <p mat-line *ngFor="let Assessment of Assessments">{{Assessment}}</p>
+                </div>
+                <h3 mat-header>Effective pedagogical methods for teaching RE skills</h3>
+                <div class="custom-list">
+                  <p mat-line *ngFor="let method of methods">{{method}}</p>
+                </div>
               </mat-card-content>
             </mat-card>
           </section>
@@ -59,21 +80,94 @@
               <mat-card-title class="card-subtitle">Submissions</mat-card-title>
               <mat-card-content class="card-content">
                 <p>
-                  Each submission is required to meet the requirements listed below and will be reviewed by at least two Program Committee members. Accepted papers with at least an author presenting at the Workshop will be published in the IEEE Digital Library.
+                    Accepted papers with at least an author presenting at the Workshop will be published in the IEEE Digital Library. Participants are invited to submit one of the following four kinds of papers:
+                </p>
+                <h3 mat-header>Short papers (3-5 pages)</h3>
+                <div class="custom-list">
+                  <p mat-line>Short papers can be on any of the topics within the scope of the workshop. They generally will have one of 3 forms: (1) positions papers that reflect on the RE education, (2) experience reports that describe experiences with a particular method for teaching an RE related skill or could describe an innovative approach to incorporating RE education into the degree curriculum, (3) educational study design papers that propose an empirical study where the authors are looking to get feedback prior to completing the study (or where only a proof of concept has been completed. Short papers will be evaluated based on their potential for generating discussion, as well as quality and originality.</p>
+                </div>
+                <h3 mat-header>Full papers (8-10 pages)</h3>
+                <div class="custom-list">
+                    <p mat-line>Full papers may describe requirements engineering educational techniques and pedagogical approaches, survey results or experiential reports. For example, a full paper might describe a specific technique for teaching an RE skill and include a case study describing its implementation and evaluation of its effectiveness as well as lessons learnt. As another example, a full paper might describe a mature tool for supporting RE training and experience of using the tool with learners.</p>
+                </div>
+                <p>                  
+                  Papers have to present original content. Previously published papers or papers accepted or under review for other publications are ineligible for submission to REET'18. 
                 </p>
               </mat-card-content>
             </mat-card>
             <mat-card>
               <mat-card-title class="card-subtitle"> Submission Requirements:</mat-card-title>
               <mat-card-content class="card-content">
+                <p>Each submission is required to meet the requirements listed below and will be reviewed by at least two Program Committee members:</p>
                 <ul>
                     <li>Written in English</li>
+                    <li>PDF format</li>
                     <li>Formatted according to the RE formatting instructions - click to see</li>
-                    <li>8 pages for long papers or 4 pages for short papers</li>
                     <li>Submitted at <a href="https://easychair.org/conferences/?conf=repa17">https://easychair.org/conferences/?conf=repa17</a></li>
                   </ul>
               </mat-card-content>
   
+            </mat-card>
+          </section>
+
+          <section id="four" class="section-border">
+            <mat-card>
+              <mat-card-title class="card-subtitle">Important Dates</mat-card-title>
+              <mat-card-content class="card-content">
+                <h3 mat-header>Deadline for abstract submission</h3>
+                <div class="custom-list">
+                  <p mat-line>
+                    <span>Friday, May 25, 2018 (23:59:59 - local times)</span><br>
+                    <span>Note: abstracts will be used for reviewer allocations</span>
+                  </p>
+                </div>
+                <h3 mat-header>Deadline for paper submission</h3>
+                <div class="custom-list">
+                  <p mat-line>Tuesday, June 12, 2018 (23:59:59  local times)</p>
+                </div>
+                <h3 mat-header>Deadline for submission of camera-ready version of paper</h3>
+                <div class="custom-list">
+                  <p mat-line>Tuesday, July 17, 2018 (23:59:59 - local times)</p>
+                </div>
+                <h3 mat-header>Deadline for submission of workshop presentation</h3>
+                <div class="custom-list">
+                  <p mat-line>Thursday August 12, 2018 (23:59:59 - local times)</p>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </section>
+
+          <section id="five" class="section-border">
+            <mat-card>
+              <mat-card-title class="card-subtitle">Registration</mat-card-title>
+              <mat-card-content class="card-content">
+                <p>
+                  Registration for the workshop is handled by the registration website of the 26th IEEE International Requirements Engineering Conference at: <a href="http://www.re18.org ">http://www.re18.org</a>.<br>
+
+                  At least one author of an accepted paper must register and present a paper. Failure to do so will result in the removal of the paper from the proceedings; more specifically it will not be submitted to the IEEE Digital Library.
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </section>
+
+          <section id="six" class="section-border">
+            <mat-card>
+              <mat-card-title class="card-subtitle">Program Comittee</mat-card-title>
+              <mat-card-content class="card-content">
+                <p>TBA</p>
+              </mat-card-content>
+            </mat-card>
+          </section>
+
+
+          <section id="seven" class="section-border">
+            <mat-card>
+              <mat-card-title class="card-subtitle">Questions</mat-card-title>
+              <mat-card-content class="card-content">
+                <p>
+                  For further information, please contact the workshop organizers at: moussam@ucalgary.ca 
+                </p>
+              </mat-card-content>
             </mat-card>
           </section>
 
