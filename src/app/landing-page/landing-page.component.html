@@ -1,11 +1,13 @@
 <body>
   <ng-container>
       <mat-sidenav-container class="example-container">
+
         <mat-sidenav position="end" #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="mobileQuery.matches ? 'false' : 'true'" class="example-sidenav" [fixedInViewport]="false" [fixedTopGap]="0"
         [fixedBottomGap]="0">
+          <mat-toolbar class="example-header">
+            <ngx-avatar src="../../assets/RE18_logo.png" size="100" value="28%" class="my_Avatar-container my_avatar_content"></ngx-avatar>
+          </mat-toolbar>
           <mat-nav-list class="nav-list-styles ">
-              <!-- <h1 mat-subheader style="font-size:40px; padding-bottom:100px; color:white">REET 2018</h1> -->
-              <ngx-avatar src="../../assets/RE18_logo.png" size="100" value="28%" class="my_Avatar-container my_avatar_content"></ngx-avatar>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#one'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Overview </a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#two'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Workshop Themes </a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#three'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Submissions </a>
@@ -14,6 +16,9 @@
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#six'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program Comittee</a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Questions </a>
           </mat-nav-list>
+          <mat-toolbar class="example-footer">
+              <a href="https://twitter.com/reet2018" class="social-links"><i class="fab fa-twitter" style="color:white;vertical-align:middle"></i></a>
+          </mat-toolbar>
         </mat-sidenav>
     
         <mat-sidenav-content>
@@ -165,7 +170,7 @@
               <mat-card-title class="card-subtitle">Questions</mat-card-title>
               <mat-card-content class="card-content">
                 <p>
-                  For further information, please contact the workshop organizers at: moussam@ucalgary.ca 
+                  For further information, please contact Mahmood Moussavi at: <a href="mailto:reet18@ucalgary.ca" target="_top">reet18@ucalgary.ca</a>
                 </p>
               </mat-card-content>
             </mat-card>

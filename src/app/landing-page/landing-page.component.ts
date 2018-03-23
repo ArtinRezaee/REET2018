@@ -40,6 +40,14 @@ export class LandingPageComponent {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
+  getHeaderStyle(){
+    let headerStyle = {
+      'min-height': this.mobileQuery.matches ? '200px' : '240px'
+    }
+
+    return headerStyle;
+  }
+
   
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);

@@ -4,6 +4,9 @@
     top: 0;
     left: 0;
     right: 0;
+    background:#e62739;
+    display: inline-grid;
+    min-height:200px;
   }
 
   
@@ -23,9 +26,19 @@
     background:#e62739;
   }
 
+  .example-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#e62739;
+    display: block;
+    text-align: center;
+  }
+
   .nav-list-styles {
       width: 100%;
-      margin-top: -145px;
+      padding-top:50px;
   }
 
   .card-subtitle {
@@ -85,7 +98,7 @@
 
   .my_Avatar-container /deep/ .avatar-container{
     width: inherit !important;
-    height: 150px !important;
+    /* height: 150px !important; */
     text-align: center !important;
   }
 
@@ -99,4 +112,14 @@
   box-sizing: border-box;
   position: relative;
   height: inherit;
+}
+
+.social-links{
+  display: inline-table;
+  text-align: center;
+  height: 35px;
+  width: 35px;
+  background: #1AB1E5;;
+  border-radius: 50%;
+  cursor: pointer;
 }
