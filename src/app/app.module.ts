@@ -20,7 +20,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: '**',  redirectTo: ''}
+  { path: '**',  redirectTo: ''},
 ];
 
 @NgModule({
