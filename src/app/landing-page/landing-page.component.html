@@ -13,9 +13,10 @@
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#three'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Submissions </a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#four'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Important Dates </a>
               <a style="color:white" mat-list-item  [ngx-scroll-to]="'#five'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Registration </a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#six'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program Comittee</a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Organizing Comittee</a>
-              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#eight'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Questions </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#six'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Accepted Papers </a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#seven'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Program Comittee</a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#eight'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Organizing Comittee</a>
+              <a style="color:white" mat-list-item  [ngx-scroll-to]="'#nine'" (click)="mobileQuery.matches ? sidenav.toggle() : ''"> Questions </a>
           </mat-nav-list>
           <mat-toolbar class="example-footer">
               <a href="https://twitter.com/reet2018" class="social-links"><i class="fab fa-twitter" style="color:white;vertical-align:middle"></i></a>
@@ -152,6 +153,28 @@
 
           <section id="six" class="section-border">
             <mat-card>
+              <mat-card-title class="card-subtitle">Accepted Papers</mat-card-title>
+              <mat-card-content class="card-content">
+                <mat-table #table  [dataSource]="papers">
+                  <ng-container matColumnDef="Authors">
+                    <mat-header-cell *matHeaderCellDef> Authors </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.authors}} </mat-cell>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Title">
+                    <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+                  </ng-container>
+
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+              </mat-card-content>
+            </mat-card>
+          </section>
+
+          <section id="seven" class="section-border">
+            <mat-card>
               <mat-card-title class="card-subtitle">Program Comittee</mat-card-title>
               <mat-card-content class="card-content">
                 <ul>
@@ -171,7 +194,7 @@
             </mat-card>
           </section>
 
-          <section id="seven" class="section-border">
+          <section id="eight" class="section-border">
             <mat-card>
               <mat-card-title class="card-subtitle">Organizing Comittee</mat-card-title>
               <mat-card-content class="card-content">
@@ -186,7 +209,7 @@
             </mat-card>
           </section>
 
-          <section id="eight" class="section-border">
+          <section id="nine" class="section-border">
             <mat-card>
               <mat-card-title class="card-subtitle">Questions</mat-card-title>
               <mat-card-content class="card-content">
