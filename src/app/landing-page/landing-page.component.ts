@@ -33,7 +33,7 @@ export class LandingPageComponent {
 
   papers: {}[] = [
     {authors: "Bernd Westphal", title: "An Undergraduate Requirements Engineering Curriculum with Formal Methods"},
-    {authors: "Jennifer Horkoff", title: "The Influences of Agile Methods in Requirements Engineering Pedagogy"},
+    {authors: "Jennifer Horkoff", title: "The Influence of Agile Methods on Requirements Engineering Courses"},
     {authors: "Kim Hertz and Paola Spoletini", title: "Are Requirements Engineering Courses Covering what Industry Needs? A Preliminary Analysis of the U.S. Situation"},
     {authors: "Itzel Morales-Ramirez and Luis Alva-Martinez", title: "Requirements Analysis Skills: How to Train Practitioners?"},
     {authors: "Antonio Lopez-Lorca, Rachel Burrows and Leon Sterling", title: "Teaching Goal Models in Agile Requirements Engineering"}
